@@ -11,6 +11,9 @@ import org.springframework.data.aerospike.core.AerospikeTemplate;
 import org.springframework.data.aerospike.repository.config.EnableAerospikeRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+/**
+ * The configuration class for Aerospike repositories.
+ */
 @Configuration
 @EnableTransactionManagement
 @EnableAerospikeRepositories(basePackages = "ps.exalt.training.serverpool.repositories")
