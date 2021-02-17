@@ -44,6 +44,12 @@ public class ServerService {
      * @param server the server to add.
      */
     public void create(ServerEntity server) {
+        // Sleep the thread for 2 seconds to simulate lengthy task.
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         serverRepository.save(server);
     }
 

@@ -86,13 +86,6 @@ public class ApplicationService {
         app.setServerId(serverToStore.getId());
         serverToStore.getApplicationIds().add((long)app.getId());
 
-        // Sleep the thread for 2 seconds to simulate lengthy task.
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         serverRepository.save(serverToStore);
         applicationRepository.save(app);
 
