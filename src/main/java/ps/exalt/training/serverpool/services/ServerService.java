@@ -46,4 +46,11 @@ public class ServerService {
     public void create(ServerEntity server) {
         serverRepository.save(server);
     }
+
+    /**
+     * Deletes all the servers from the server pool.
+     */
+    public void deleteAllServers() {
+        serverRepository.deleteAll();
+    }
 }
